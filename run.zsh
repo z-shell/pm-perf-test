@@ -16,9 +16,9 @@ mkdir -p results
 
 print -P "%F{160}Removing plugins and results from previous test run…%f"
 
-print rm -rf **/(_zplug|_zgen|_zinit)(DN) results/*.txt(DN)
+print rm -rf **/(_zplug|_zgen|_zi)(DN) results/*.txt(DN)
 sleep 2
-rm -rf **/(_zplug|_zgen|_zinit)(DN) results/*.txt(DN)
+rm -rf **/(_zplug|_zgen|_zi)(DN) results/*.txt(DN)
 
 print -P "%F{160}done%f"
 
@@ -26,7 +26,7 @@ print -P "\n%F{160}============================%f"
 print -P "%F{160}Measuring installation time…%f"
 print -P "%F{160}============================%f"
 
-for i in zplug zgen zinit*~*omz; do
+for i in zplug zgen zi*~*omz; do
     print -P "\n%F{154}=== 3 results for %F{140}$i%F{154}: ===%f"
 
     cd -q $i
@@ -37,16 +37,16 @@ for i in zplug zgen zinit*~*omz; do
 
     (( verbose )) && {
         ZDOTDIR=$PWD zsh -i -c -- $cmd 2>&1 > >(grep '\[zshrc\]' >> ../results/$i-inst.txt) > >(cat)
-        rm -rf _(zplug|zgen|zinit)
+        rm -rf _(zplug|zgen|zi)
         ZDOTDIR=$PWD zsh -i -c -- $cmd 2>&1 > >(grep '\[zshrc\]' >> ../results/$i-inst.txt) > >(cat)
-        rm -rf _(zplug|zgen|zinit)
+        rm -rf _(zplug|zgen|zi)
         ZDOTDIR=$PWD zsh -i -c -- $cmd 2>&1 > >(grep '\[zshrc\]' >> ../results/$i-inst.txt) > >(cat)
         ((1))
     } || {
         ZDOTDIR=$PWD zsh -i -c -- $cmd |& grep '\[zshrc\]' | tee -a ../results/$i-inst.txt
-        rm -rf _(zplug|zgen|zinit)
+        rm -rf _(zplug|zgen|zi)
         ZDOTDIR=$PWD zsh -i -c -- $cmd |& grep '\[zshrc\]' | tee -a ../results/$i-inst.txt
-        rm -rf _(zplug|zgen|zinit)
+        rm -rf _(zplug|zgen|zi)
         ZDOTDIR=$PWD zsh -i -c -- $cmd |& grep '\[zshrc\]' | tee -a ../results/$i-inst.txt
     }
 
@@ -57,7 +57,7 @@ print -P "\n%F{160}============================%f"
 print -P "%F{160}Measuring startup-time time…%f"
 print -P "%F{160}============================%f"
 
-for i in zplug zgen zinit*~(*omz|*txt); do
+for i in zplug zgen zi*~(*omz|*txt); do
     print -P "\n%F{154}=== 10 results for %F{140}$i%F{154}: ===%f"
 
     cd -q $i

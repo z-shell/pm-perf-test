@@ -61,7 +61,7 @@ arzzen/git-quick-stats.git
 
 Some of the plugins are rather regular `Makefile`-based projects, like
 `arzzen/git-quick-stats.git`. The `atclone''`, `make''`, ice modifiers of
-Zinit and `hook-build` tag of Zplug allow to install and use them. However
+ZI and `hook-build` tag of Zplug allow to install and use them. However
 they're problematic with `zgen`, which doesn't have such hooks. For it, instead
 an empty plugin [z-shell/null](https://github.com/z-shell/null) is being loaded
 in a following way:
@@ -98,11 +98,11 @@ simplifying the test because of limited `zgen` functionality. Also, `zgen`
 doesn't run the compilation (i.e. `make`) during the installation of the
 plugins.
 
-Zplug and Zinit tests are rather identical
+Zplug and ZI tests are rather identical
 ([zshrc](https://github.com/z-shell/pm-perf-test/blob/main/zplug/.zshrc) for
 Zplug,
-[zshrc](https://github.com/z-shell/pm-perf-test/blob/main/zinit-load/.zshrc)
-for Zinit).
+[zshrc](https://github.com/z-shell/pm-perf-test/blob/main/zi-load/.zshrc)
+for ZI).
 
 ## Results
 
@@ -112,16 +112,15 @@ for Zinit).
 
 ## Result comments
 
-The three different Zinit results needs explaining:
+The three different ZI results needs explaining:
 
-1. Zinit light – plugins are being loaded without tracking, i.e.: cannot be
+1. ZI light – plugins are being loaded without tracking, i.e.: cannot be
    unloaded and their reports are being empty.
 
-2. Zinit load – plugins are being loaded with tracking, i.e.: are available for
-   unload and their report data is gathered (available through `zinit report
-   {plugin-name}` command).
+2. ZI load – plugins are being loaded with tracking, i.e.: are available for
+   unload and their report data is gathered (available through `zi report {plugin-name}` command).
 
-3. Zinit (Turbo) load – plugins are being loaded with tracking **and in Turbo
+3. ZI (Turbo) load – plugins are being loaded with tracking **and in Turbo
    mode** – i.e.: in background & after prompt – the shell is instantly ready to
    use.
 

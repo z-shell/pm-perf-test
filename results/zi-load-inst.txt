@@ -1,0 +1,3 @@
+[zshrc] zi block took 2118.7 ms
+[zshrc] zi block took 308.9 ms
+[zshrc] zi block took 311.1 ms
