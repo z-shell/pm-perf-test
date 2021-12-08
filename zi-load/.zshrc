@@ -24,7 +24,7 @@ zi load z-shell/zsh-unique-id
 zi load z-shell/zsh-editing-workbench
 zi load z-shell/zsh-navigation-tools   # for n-history
 
-# declare-zshrc
+# declare-zsh
 zi load z-shell/declare-zsh
 
 # zsh-diff-so-fancy
