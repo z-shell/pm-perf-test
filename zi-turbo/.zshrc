@@ -21,6 +21,36 @@ fi
 zi ice wait lucid
 zi load z-shell/zsh-unique-id
 
+# zsh-editing-workbench & zsh-navigation-tools
+zi ice wait"1" lucid
+zi load z-shell/zsh-editing-workbench
+zi ice wait"1" lucid
+zi load z-shell/zsh-navigation-tools   # for n-history
+
+# declare-zshrc
+zi ice wait"2" lucid
+zi load z-shell/declare-zsh
+
+# zsh-diff-so-fancy
+zi ice wait"2" lucid as"program" pick"bin/git-dsf"
+zi load z-shell/zsh-diff-so-fancy
+
+# Another load of the same plugin, to add zc-bg-notify to PATH
+zi ice wait silent as"program" id-as"zconvey-cmd" pick"cmds/zc-bg-notify"
+zi load z-shell/zconvey
+
+# z-shell/H-S-MW
+zi ice wait"1" lucid
+zi load z-shell/H-S-MW
+
+# git-url
+zi ice wait"2" lucid as"program" pick"$ZPFX/bin/git-url" make"install PREFIX=$ZPFX GITURL_NO_CGITURL=1"
+zi load z-shell/git-url
+
+# ZUI and Crasis
+zi ice wait"1" lucid
+zi load z-shell/zui
+
 # Loaded mostly to stay in touch with the plugin (for the users)
 # and for the themes 2 & 3 (lambda-mod-zsh-theme & lambda-gitster)
 zi ice wait lucid
@@ -38,10 +68,6 @@ git reset --hard; \${PFX}sed -i '/DIR/c\DIR 38;5;63;1' LS_COLORS; \
 atpull'%atclone' pick"c.zsh" nocompile'!' \
 atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”'
 zi light trapd00r/LS_COLORS
-
-# Another load of the same plugin, to add zc-bg-notify to PATH
-zi ice wait silent as"program" id-as"zconvey-cmd" pick"cmds/zc-bg-notify"
-zi load z-shell/zconvey
 
 # fzy
 zi ice wait"1" lucid as"program" make"!PREFIX=$ZPFX install" \
@@ -65,23 +91,9 @@ zi load hlissner/zsh-autopair
 #zi ice wait"1" lucid atload'ztie -d db/redis -a 127.0.0.1:4815/5 -P $HOME/.zredisconf -zSL main rdhash'
 #zi load z-shell/zredis
 
-# zsh-editing-workbench & zsh-navigation-tools
-zi ice wait"1" lucid
-zi load z-shell/zsh-editing-workbench
-zi ice wait"1" lucid
-zi load z-shell/zsh-navigation-tools   # for n-history
-
-# z-shell/history-search-multi-word
-zi ice wait"1" lucid
-zi load z-shell/history-search-multi-word
-
 # Theme no. 4 – pure
 zi ice wait'!' lucid atload"geometry::prompt"
 zi load geometry-zsh/geometry
-
-# ZUI and Crasis
-zi ice wait"1" lucid
-zi load z-shell/zui
 
 # Gitignore plugin – commands gii and gi
 zi ice wait"2" lucid
@@ -90,33 +102,25 @@ zi load voronkovich/gitignore.plugin.zsh
 # Autosuggestions & fast-syntax-highlighting
 zi ice wait"0c" lucid atload"_zsh_autosuggest_start"
 zi light zsh-users/zsh-autosuggestions
-zi ice wait"1" lucid atinit"ZI[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay"
-zi light z-shell/fast-syntax-highlighting
+
+#zi ice wait"1" lucid atinit"ZI[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay"
+#zi light z-shell/fast-syntax-highlighting
 
 # ogham/exa, replacement for ls
 zi ice wait"2" lucid from"gh-r" as"program" mv"exa* -> exa"
 zi light ogham/exa
 
 # vramsteg
-#zi ice wait"2" lucid as"program" pick"src/vramsteg" \
-#            atclone'cmake .' atpull'%atclone' make
+#zi ice wait"2" lucid as"program" pick"src/vramsteg" atclone'cmake .' atpull'%atclone' make
 #zi load z-shell/vramsteg-zsh
 
 # revolver
-zi ice wait"2" lucid as"program" pick"revolver"
-zi load z-shell/revolver
+#zi ice wait"2" lucid as"program" pick"revolver"
+#zi load z-shell/revolver
 
 # zunit
-zi ice wait"2" lucid as"program" pick"zunit" atclone"./build.zsh" atpull"%atclone"
-zi load z-shell/zunit
-
-# declare-zshrc
-zi ice wait"2" lucid
-zi load z-shell/declare-zsh
-
-# zsh-diff-so-fancy
-zi ice wait"2" lucid as"program" pick"bin/git-dsf"
-zi load z-shell/zsh-diff-so-fancy
+#zi ice wait"2" lucid as"program" pick"zunit" atclone"./build.zsh" atpull"%atclone"
+#zi load z-shell/zunit
 
 # git-now
 zi ice wait"2" lucid as"program" pick"$ZPFX/bin/git-now" make"PREFIX=$ZPFX install"
@@ -130,10 +134,6 @@ zi load tj/git-extras
 zi ice wait"2" lucid as"program" atclone"perl Makefile.PL PREFIX=$ZPFX" \
 atpull'%atclone' make'install' pick"$ZPFX/bin/git-cal"
 zi load k4rthik/git-cal
-
-# git-url
-zi ice wait"2" lucid as"program" pick"$ZPFX/bin/git-url" make"install PREFIX=$ZPFX GITURL_NO_CGITURL=1"
-zi load z-shell/git-url
 
 # git-recall
 zi ice wait"3" lucid as"program" pick"git-recall"

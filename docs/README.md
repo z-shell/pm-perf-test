@@ -1,13 +1,12 @@
-# `PERFORMANCE-TEST` OF ZSH PLUGIN MANAGERS
+<h1> Plugin Manager performance test for Zsh </h1>
 
 To run the test, execute:
 
 ```zsh
-% ./run.zsh
+./run.zsh
 ```
 
-However, there are problems with `zplug` when the test is run in this way – the
-test hangs with a message:
+However, there are problems with `zplug` when the test is run in this way – the test hangs with a message:
 
 ```
 zsh: suspended (tty input)  ./run.zsh
@@ -24,37 +23,36 @@ run.zsh
 
 ## Drawing the results
 
-To compute average results and draw the plots, run `plot.py` Python script. It
-needs `matplotlib` Python package.
+To compute average results and draw the plots, run `plot.py` Python script. It needs `matplotlib` Python package.
 
 ## Details of the test
 
-Following 28 plugins are being used in the test:
+Following 25 plugins are being used in the test:
 
-```
+```shell
 z-shell/zsh-unique-id
+z-shell/zsh-editing-workbench
+z-shell/zsh-navigation-tools
+z-shell/declare-zsh
+z-shell/zsh-diff-so-fancy
+z-shell/zconvey
+z-shell/H-S-MW
+z-shell/git-url
+z-shell/zui
 Oh My Zsh / lib/git.zsh
 Oh My Zsh / plugins/git/git.plugin.zsh
 trapd00r/LS_COLORS
-z-shell/zconvey
 jhawthorn/fzy
 junegunn/fzf-bin
 urbainvaes/fzf-marks
 hlissner/zsh-autopair
-z-shell/zsh-editing-workbench
-z-shell/zsh-navigation-tools
-z-shell/history-search-multi-word
 geometry-zsh/geometry
-z-shell/zui
 voronkovich/gitignore.plugin.zsh
 zsh-users/zsh-autosuggestions
 ogham/exa
-z-shell/declare-zsh
-z-shell/zsh-diff-so-fancy
 iwata/git-now
 tj/git-extras
 k4rthik/git-cal
-z-shell/git-url
 Fakerr/git-recall
 arzzen/git-quick-stats.git
 ```
@@ -76,8 +74,7 @@ zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-13
 zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-14
 ```
 
-the `empty-plugin.zsh-14`, etc. is a branch. The file `null.plugin.zsh` contains
-only 3 instructions:
+the `empty-plugin.zsh-14`, etc. is a branch. The file `null.plugin.zsh` contains only 3 instructions:
 
 ```zsh
 0="${${ZERO:-${0:#$ZSH_ARGZERO}}:-${(%):-%N}}"
@@ -99,10 +96,8 @@ doesn't run the compilation (i.e. `make`) during the installation of the
 plugins.
 
 Zplug and ZI tests are rather identical
-([zshrc](https://github.com/z-shell/pm-perf-test/blob/main/zplug/.zshrc) for
-Zplug,
-[zshrc](https://github.com/z-shell/pm-perf-test/blob/main/zi-load/.zshrc)
-for ZI).
+([zshrc](https://github.com/z-shell/pm-perf-test/blob/main/zplug/.zshrc) for Zplug,
+[zshrc](https://github.com/z-shell/pm-perf-test/blob/main/zi-load/.zshrc) for ZI).
 
 ## Results
 
@@ -121,7 +116,4 @@ The three different ZI results needs explaining:
    unload and their report data is gathered (available through `zi report {plugin-name}` command).
 
 3. ZI (Turbo) load – plugins are being loaded with tracking **and in Turbo
-   mode** – i.e.: in background & after prompt – the shell is instantly ready to
-   use.
-
-<!-- vim:set ft=markdown tw=80 autoindent: -->
+   mode** – i.e.: in background & after prompt – the shell is instantly ready to use.

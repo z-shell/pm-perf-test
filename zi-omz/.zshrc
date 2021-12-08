@@ -42,7 +42,7 @@ zi snippet OMZ::plugins/docker/_docker
 
 # G.
 zi ice wait atinit"zpcompinit" lucid
-zi light z-shell/fast-syntax-highlighting
+zi light z-shell/F-Sy-H
 
 zi ice wait atload"_zsh_autosuggest_start" lucid
 zi light zsh-users/zsh-autosuggestions

@@ -1,0 +1,10 @@
+[zshrc] Zgen block took 113.0 ms
+[zshrc] Zgen block took 99.0 ms
+[zshrc] Zgen block took 94.3 ms
+[zshrc] Zgen block took 92.3 ms
+[zshrc] Zgen block took 106.5 ms
+[zshrc] Zgen block took 110.9 ms
+[zshrc] Zgen block took 121.5 ms
+[zshrc] Zgen block took 96.6 ms
+[zshrc] Zgen block took 103.1 ms
+[zshrc] Zgen block took 105.9 ms

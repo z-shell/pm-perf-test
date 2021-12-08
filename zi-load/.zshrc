@@ -20,6 +20,31 @@ fi
 # ZUID_ID and also a codename (ZUID_CODENAME)
 zi load z-shell/zsh-unique-id
 
+# zsh-editing-workbench & zsh-navigation-tools
+zi load z-shell/zsh-editing-workbench
+zi load z-shell/zsh-navigation-tools   # for n-history
+
+# declare-zshrc
+zi load z-shell/declare-zsh
+
+# zsh-diff-so-fancy
+zi ice as"program" pick"bin/git-dsf"
+zi load z-shell/zsh-diff-so-fancy
+
+# Another load of the same plugin, to add zc-bg-notify to PATH
+zi ice silent as"program" id-as"zconvey-cmd" pick"cmds/zc-bg-notify"
+zi load z-shell/zconvey
+
+# z-shell/H-S-MW
+zi load z-shell/H-S-MW
+
+# git-url
+zi ice as"program" pick"$ZPFX/bin/git-url" make"install PREFIX=$ZPFX GITURL_NO_CGITURL=1"
+zi load z-shell/git-url
+
+# ZUI and Crasis
+zi load z-shell/zui
+
 # Loaded mostly to stay in touch with the plugin (for the users)
 # and for the themes 2 & 3 (lambda-mod-zsh-theme & lambda-gitster)
 zi snippet OMZ::lib/git.zsh
@@ -36,10 +61,6 @@ git reset --hard; \${PFX}sed -i '/DIR/c\DIR 38;5;63;1' LS_COLORS; \
 atpull'%atclone' pick"c.zsh" nocompile'!' \
 atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”'
 zi load trapd00r/LS_COLORS
-
-# Another load of the same plugin, to add zc-bg-notify to PATH
-zi ice silent as"program" id-as"zconvey-cmd" pick"cmds/zc-bg-notify"
-zi load z-shell/zconvey
 
 # fzy
 zi ice as"program" make"!PREFIX=$ZPFX install" atclone"cp contrib/fzy-* $ZPFX/bin/" pick"$ZPFX/bin/fzy*"
@@ -59,18 +80,8 @@ zi load hlissner/zsh-autopair
 #zi ice atload'ztie -d db/redis -a 127.0.0.1:4815/5 -P $HOME/.zredisconf -zSL main rdhash'
 #zi load z-shell/zredis
 
-# zsh-editing-workbench & zsh-navigation-tools
-zi load z-shell/zsh-editing-workbench
-zi load z-shell/zsh-navigation-tools   # for n-history
-
-# z-shell/history-search-multi-word
-zi load z-shell/history-search-multi-word
-
 # Theme no. 4 – pure
 zi load geometry-zsh/geometry
-
-# ZUI and Crasis
-zi load z-shell/zui
 
 # Gitignore plugin – commands gii and gi
 zi load voronkovich/gitignore.plugin.zsh
@@ -88,19 +99,12 @@ zi load ogham/exa
 #zi load z-shell/vramsteg-zsh
 
 # revolver
-zi ice as"program" pick"revolver"
-zi load z-shell/revolver
+#zi ice as"program" pick"revolver"
+#zi load z-shell/revolver
 
 # zunit
-zi ice as"program" pick"zunit" atclone"./build.zsh" atpull"%atclone"
-zi load z-shell/zunit
-
-# declare-zshrc
-zi load z-shell/declare-zsh
-
-# zsh-diff-so-fancy
-zi ice as"program" pick"bin/git-dsf"
-zi load z-shell/zsh-diff-so-fancy
+#zi ice as"program" pick"zunit" atclone"./build.zsh" atpull"%atclone"
+#zi load z-shell/zunit
 
 # git-now
 zi ice as"program" pick"$ZPFX/bin/git-now" make"PREFIX=$ZPFX install"
@@ -114,10 +118,6 @@ zi load tj/git-extras
 zi ice as"program" atclone"perl Makefile.PL PREFIX=$ZPFX" \
 atpull'%atclone' make'install' pick"$ZPFX/bin/git-cal"
 zi load k4rthik/git-cal
-
-# git-url
-zi ice as"program" pick"$ZPFX/bin/git-url" make"install PREFIX=$ZPFX GITURL_NO_CGITURL=1"
-zi load z-shell/git-url
 
 # git-recall
 zi ice as"program" pick"git-recall"
