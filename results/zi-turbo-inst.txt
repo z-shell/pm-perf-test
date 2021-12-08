@@ -1,6 +1,6 @@
-[?12l[?25h[?12l[?25h[zshrc] zi block took 91273.3 ms
-[zshrc] Install time: 91275.0 ms
-[?12l[?25h[?12l[?25h[zshrc] zi block took 90464.0 ms
-[zshrc] Install time: 90465.5 ms
-[?12l[?25h[?12l[?25h[zshrc] zi block took 86908.6 ms
-[zshrc] Install time: 86910.5 ms
+[?12l[?25h[?12l[?25h[zshrc] zi block took 30742.0 ms
+[zshrc] Install time: 31095.1 ms
+[?12l[?25h[?12l[?25h[zshrc] zi block took 32177.1 ms
+[zshrc] Install time: 32499.5 ms
+[?12l[?25h[?12l[?25h[zshrc] zi block took 28947.6 ms
+[zshrc] Install time: 29285.7 ms
