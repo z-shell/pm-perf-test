@@ -25,8 +25,8 @@ zgen load z-shell/zsh-unique-id
 zgen load z-shell/zsh-editing-workbench
 zgen load z-shell/zsh-navigation-tools   # for n-history
 
-# declare-zshrc
-zgen load z-shell/declare-zshrc
+# declare-zsh
+zgen load z-shell/declare-zsh
 
 # zsh-diff-so-fancy
 zgen load z-shell/zsh-diff-so-fancy
