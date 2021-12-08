@@ -27,7 +27,7 @@ zi load z-shell/zsh-editing-workbench
 zi ice wait"1" lucid
 zi load z-shell/zsh-navigation-tools   # for n-history
 
-# declare-zshrc
+# declare-zsh
 zi ice wait"2" lucid
 zi load z-shell/declare-zsh
 
