@@ -24,7 +24,7 @@ zi light z-shell/zsh-unique-id
 zi light z-shell/zsh-editing-workbench
 zi light z-shell/zsh-navigation-tools   # for n-history
 
-# declare-zshrc
+# declare-zsh
 zi light z-shell/declare-zsh
 
 # zsh-diff-so-fancy
