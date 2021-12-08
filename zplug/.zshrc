@@ -19,8 +19,8 @@ zplug z-shell/zsh-unique-id
 zplug z-shell/zsh-editing-workbench
 zplug z-shell/zsh-navigation-tools   # for n-history
 
-# declare-zshrc
-zplug z-shell/declare-zshrc
+# declare-zsh
+zplug z-shell/declare-zsh
 
 # zsh-diff-so-fancy
 zplug z-shell/zsh-diff-so-fancy, as:command, use:"bin/git-dsf"
