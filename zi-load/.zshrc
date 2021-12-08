@@ -1,9 +1,9 @@
 typeset -gA ZI
-ZI[HOME_DIR]=$PWD/_zplugin
+ZI[HOME_DIR]=$PWD/_zi
 ZPFX=${ZI[HOME_DIR]}/polaris
 
 if [[ ! -d ${ZI[HOME_DIR]}/bin ]]; then
-    git clone --depth 1 https://github.com/z-shell/zi "${ZI[HOME_DIR]}/bin"
+  git clone --depth=1 https://github.com/z-shell/zi "${ZI[HOME_DIR]}/bin"
 fi
 
 # Start measuring time, in general with microsecond accuracy
@@ -13,7 +13,7 @@ source "${ZI[HOME_DIR]}/bin/zi.zsh"
 
 # Ensure that zi is compiled
 if [[ ! -f ${ZI[BIN_DIR]}/zi.zsh.zwc ]]; then
-    zi self-update
+  zi self-update
 fi
 
 # Assign each zsh session an unique ID, available in
@@ -30,13 +30,11 @@ zi snippet OMZ::plugins/git/git.plugin.zsh
 
 # On OSX, you might need to install coreutils from homebrew and use the
 # g-prefix – gsed, gdircolors
-zi ice \
-    atclone"local PFX=${${(M)OSTYPE:#*darwin*}:+g}
-            git reset --hard; \${PFX}sed -i \
-            '/DIR/c\DIR                   38;5;63;1' LS_COLORS; \
-            \${PFX}dircolors -b LS_COLORS > c.zsh" \
-            atpull'%atclone' pick"c.zsh" nocompile'!' \
-            atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”'
+zi ice atclone"local PFX=${${(M)OSTYPE:#*darwin*}:+g}
+git reset --hard; \${PFX}sed -i '/DIR/c\DIR 38;5;63;1' LS_COLORS; \
+\${PFX}dircolors -b LS_COLORS > c.zsh" \
+atpull'%atclone' pick"c.zsh" nocompile'!' \
+atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”'
 zi load trapd00r/LS_COLORS
 
 # Another load of the same plugin, to add zc-bg-notify to PATH
@@ -44,9 +42,7 @@ zi ice silent as"program" id-as"zconvey-cmd" pick"cmds/zc-bg-notify"
 zi load z-shell/zconvey
 
 # fzy
-zi ice as"program" make"!PREFIX=$ZPFX install" \
-    atclone"cp contrib/fzy-* $ZPFX/bin/" \
-    pick"$ZPFX/bin/fzy*"
+zi ice as"program" make"!PREFIX=$ZPFX install" atclone"cp contrib/fzy-* $ZPFX/bin/" pick"$ZPFX/bin/fzy*"
 zi load jhawthorn/fzy
 
 # fzf, for fzf-marks
@@ -92,13 +88,12 @@ zi load ogham/exa
 #zi load z-shell/vramsteg-zsh
 
 # revolver
-#zi ice as"program" pick"revolver"
-#zi load z-shell/revolver
+zi ice as"program" pick"revolver"
+zi load z-shell/revolver
 
 # zunit
-#zi ice as"program" pick"zunit" \
-#            atclone"./build.zsh" atpull"%atclone"
-#zi load z-shell/zunit
+zi ice as"program" pick"zunit" atclone"./build.zsh" atpull"%atclone"
+zi load z-shell/zunit
 
 # declare-zshrc
 zi load z-shell/declare-zsh
@@ -117,7 +112,7 @@ zi load tj/git-extras
 
 # git-cal
 zi ice as"program" atclone"perl Makefile.PL PREFIX=$ZPFX" \
-    atpull'%atclone' make'install' pick"$ZPFX/bin/git-cal"
+atpull'%atclone' make'install' pick"$ZPFX/bin/git-cal"
 zi load k4rthik/git-cal
 
 # git-url
@@ -129,9 +124,8 @@ zi ice as"program" pick"git-recall"
 zi load Fakerr/git-recall
 
 # git-quick-stats
-zi ice as"program" make"PREFIX=$ZPFX install" \
-    pick"$ZPFX/bin/git-quick-stats" \
-    atload"export _MENU_THEME=legacy"
+zi ice as"program" make"PREFIX=$ZPFX install" pick"$ZPFX/bin/git-quick-stats" \
+atload"export _MENU_THEME=legacy"
 zi load arzzen/git-quick-stats.git
 
 autoload compinit

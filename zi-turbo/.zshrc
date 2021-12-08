@@ -32,13 +32,11 @@ zi snippet OMZ::plugins/git/git.plugin.zsh
 
 # On OSX, you might need to install coreutils from homebrew and use the
 # g-prefix – gsed, gdircolors
-zi ice wait"0c" lucid \
-    atclone"local PFX=${${(M)OSTYPE:#*darwin*}:+g}
-            git reset --hard; \${PFX}sed -i \
-            '/DIR/c\DIR                   38;5;63;1' LS_COLORS; \
-            \${PFX}dircolors -b LS_COLORS > c.zsh" \
-            atpull'%atclone' pick"c.zsh" nocompile'!' \
-            atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”'
+zi ice wait"0c" lucid atclone"local PFX=${${(M)OSTYPE:#*darwin*}:+g}
+git reset --hard; \${PFX}sed -i '/DIR/c\DIR 38;5;63;1' LS_COLORS; \
+\${PFX}dircolors -b LS_COLORS > c.zsh" \
+atpull'%atclone' pick"c.zsh" nocompile'!' \
+atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”'
 zi light trapd00r/LS_COLORS
 
 # Another load of the same plugin, to add zc-bg-notify to PATH
@@ -47,8 +45,8 @@ zi load z-shell/zconvey
 
 # fzy
 zi ice wait"1" lucid as"program" make"!PREFIX=$ZPFX install" \
-    atclone"cp contrib/fzy-* $ZPFX/bin/" \
-    pick"$ZPFX/bin/fzy*"
+atclone"cp contrib/fzy-* $ZPFX/bin/" \
+pick"$ZPFX/bin/fzy*"
 zi light jhawthorn/fzy
 
 # fzf, for fzf-marks
@@ -105,13 +103,12 @@ zi light ogham/exa
 #zi load z-shell/vramsteg-zsh
 
 # revolver
-#zi ice wait"2" lucid as"program" pick"revolver"
-#zi load z-shell/revolver
+zi ice wait"2" lucid as"program" pick"revolver"
+zi load z-shell/revolver
 
 # zunit
-#zi ice wait"2" lucid as"program" pick"zunit" \
-#            atclone"./build.zsh" atpull"%atclone"
-#zi load z-shell/zunit
+zi ice wait"2" lucid as"program" pick"zunit" atclone"./build.zsh" atpull"%atclone"
+zi load z-shell/zunit
 
 # declare-zshrc
 zi ice wait"2" lucid
@@ -131,7 +128,7 @@ zi load tj/git-extras
 
 # git-cal
 zi ice wait"2" lucid as"program" atclone"perl Makefile.PL PREFIX=$ZPFX" \
-    atpull'%atclone' make'install' pick"$ZPFX/bin/git-cal"
+atpull'%atclone' make'install' pick"$ZPFX/bin/git-cal"
 zi load k4rthik/git-cal
 
 # git-url
@@ -143,9 +140,8 @@ zi ice wait"3" lucid as"program" pick"git-recall"
 zi load Fakerr/git-recall
 
 # git-quick-stats
-zi ice wait"3" lucid as"program" make"PREFIX=$ZPFX install" \
-    pick"$ZPFX/bin/git-quick-stats" \
-    atload"export _MENU_THEME=legacy"
+zi ice wait"3" lucid as"program" make"PREFIX=$ZPFX install" pick"$ZPFX/bin/git-quick-stats" \
+atload"export _MENU_THEME=legacy"
 zi load arzzen/git-quick-stats.git
 
 print "[zshrc] zi block took ${(M)$(( SECONDS * 1000 ))#*.?} ms"
