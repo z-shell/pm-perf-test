@@ -50,4 +50,4 @@ zi light zsh-users/zsh-autosuggestions
 autoload -Uz compinit
 compinit
 
-print -P "[zshrc] zi block took ${(M)$(( SECONDS * 1000 ))#*.?} ms"
+print "[zshrc] zi block took ${(M)$(( SECONDS * 1000 ))#*.?} ms"

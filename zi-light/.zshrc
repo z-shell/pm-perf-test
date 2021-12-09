@@ -3,7 +3,7 @@ ZI[HOME_DIR]="$PWD/_zi"
 ZPFX="${ZI[HOME_DIR]}/polaris"
 
 if [[ ! -d "${ZI[HOME_DIR]}/bin" ]]; then
-    git clone --depth 1 https://github.com/z-shell/zi.git "${ZI[HOME_DIR]}/bin"
+  git clone --depth 1 https://github.com/z-shell/zi.git "${ZI[HOME_DIR]}/bin"
 fi
 
 # Start measuring time, in general with microsecond accuracy
@@ -13,7 +13,7 @@ source "${ZI[HOME_DIR]}/bin/zi.zsh"
 
 # Ensure that zi is compiled
 if [[ ! -f "${ZI[BIN_DIR]}/zi.zsh.zwc" ]]; then
-    zi self-update
+  zi self-update
 fi
 
 # Assign each zsh session an unique ID, available in
@@ -132,4 +132,4 @@ zi light arzzen/git-quick-stats.git
 autoload -Uz compinit
 compinit
 
-print -P "[zshrc] zi block took ${(M)$(( SECONDS * 1000 ))#*.?} ms"
+print "[zshrc] zi block took ${(M)$(( SECONDS * 1000 ))#*.?} ms"
