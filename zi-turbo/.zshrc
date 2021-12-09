@@ -1,9 +1,9 @@
 typeset -gA ZI
-ZI[HOME_DIR]=$PWD/_zi
-ZPFX=${ZI[HOME_DIR]}/polaris
+ZI[HOME_DIR]="$PWD/_zi"
+ZPFX="${ZI[HOME_DIR]}/polaris"
 
-if [[ ! -d ${ZI[HOME_DIR]}/bin ]]; then
-    git clone --depth 1 https://github.com/z-shell/zi "${ZI[HOME_DIR]}/bin"
+if [[ ! -d "${ZI[HOME_DIR]}/bin" ]]; then
+  git clone --depth 1 https://github.com/z-shell/zi.git "${ZI[HOME_DIR]}/bin"
 fi
 
 # Start measuring time, in general with microsecond accuracy
@@ -12,8 +12,8 @@ typeset -F4 SECONDS=0
 source "${ZI[HOME_DIR]}/bin/zi.zsh"
 
 # Ensure that zi is compiled
-if [[ ! -f ${ZI[BIN_DIR]}/zi.zsh.zwc ]]; then
-    zi self-update
+if [[ ! -f "${ZI[BIN_DIR]}/zi.zsh.zwc" ]]; then
+  zi self-update
 fi
 
 # Assign each zsh session an unique ID, available in
@@ -144,4 +144,7 @@ zi ice wait"3" lucid as"program" make"PREFIX=$ZPFX install" pick"$ZPFX/bin/git-q
 atload"export _MENU_THEME=legacy"
 zi load arzzen/git-quick-stats.git
 
-print "[zshrc] zi block took ${(M)$(( SECONDS * 1000 ))#*.?} ms"
+autoload -Uz compinit
+compinit
+
+print -P "[zshrc] zi block took ${(M)$(( SECONDS * 1000 ))#*.?} ms"

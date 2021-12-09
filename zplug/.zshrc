@@ -1,15 +1,14 @@
+ZPLUG_HOME="$PWD/_zplug"
+ZPFX="$ZPLUG_HOME/polaris"
 
-ZPLUG_HOME=$PWD/_zplug
-ZPFX=$ZPLUG_HOME/polaris
-
-if [[ ! -d $ZPLUG_HOME/bin ]]; then
-  git clone --depth=1 https://github.com/zplug/zplug $ZPLUG_HOME/bin
+if [[ ! -d "$ZPLUG_HOME/bin" ]]; then
+  git clone --depth 1 https://github.com/zplug/zplug.git "$ZPLUG_HOME/bin"
 fi
 
 # Start measuring time, in general with microsecond accuracy
 typeset -F4 SECONDS=0
 
-source $ZPLUG_HOME/bin/init.zsh
+source "$ZPLUG_HOME/bin/init.zsh"
 
 # Assign each zsh session an unique ID, available in
 # ZUID_ID and also a codename (ZUID_CODENAME)
@@ -49,8 +48,7 @@ zplug plugins/git, from:oh-my-zsh, hook-load:"unalias grv g 2>/dev/null"
 # On OSX, you might need to install coreutils from homebrew and use the
 # g-prefix – gsed, gdircolors
 zplug trapd00r/LS_COLORS, hook-build:"local PFX=${${(M)OSTYPE:#*darwin*}:+g}
-git reset --hard; \${PFX}sed -i \
-'/DIR/c\DIR 38;5;63;1' LS_COLORS; \
+git reset --hard; \${PFX}sed -i '/DIR/c\DIR 38;5;63;1' LS_COLORS; \
 \${PFX}dircolors -b LS_COLORS > c.zsh", \
 use:c.zsh, \
 hook-load:'zstyle a b c'
@@ -123,7 +121,7 @@ print "[zshrc] Zplug block A took ${(M)$(( SECONDS * 1000 ))#*.?} ms"
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
-    echo; zplug install
+  echo; zplug install
 fi
 
 # Then, source plugins and add commands to $PATH

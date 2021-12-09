@@ -1,9 +1,9 @@
-ZGEN_DIR=$PWD/_zgen
+ZGEN_DIR="$PWD/_zgen"
 
 compdef() { :; }
 
-if [[ ! -d $ZGEN_DIR ]]; then
-    git clone --depth=1 https://github.com/tarjoilija/zgen.git "$ZGEN_DIR"
+if [[ ! -d "$ZGEN_DIR" ]]; then
+    git clone --depth 1 https://github.com/tarjoilija/zgen.git "$ZGEN_DIR"
 fi
 
 # Start measuring time, in general with microsecond accuracy
