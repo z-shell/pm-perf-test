@@ -101,9 +101,9 @@ Zplug and ZI tests are rather identical
 
 ## Results
 
-![Installation times](https://raw.githubusercontent.com/z-shell/pm-perf-test/main/plots/installation-times.png)
+![Installation times](plots/installation-times.png)
 
-![Startup times](https://raw.githubusercontent.com/z-shell/pm-perf-test/main/plots/startup-times.png)
+![Startup times](plots/startup-times.png)
 
 ## Result comments
 

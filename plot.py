@@ -15,15 +15,15 @@ def autolabel(rects):
 titles = {
   "results/zplug-inst.txt": "zplug",
   "results/zgen-inst.txt": "zgen",
-  "results/zi-light-inst.txt": "zi light",
-  "results/zi-load-inst.txt": "zi load",
-  "results/zi-turbo-inst.txt": "zi (Turbo) load",
+  "results/zi-light-inst.txt": "ZI light",
+  "results/zi-load-inst.txt": "ZI load",
+  "results/zi-turbo-inst.txt": "ZI (Turbo) load",
 
   "results/zplug.txt": "zplug",
   "results/zgen.txt": "zgen",
-  "results/zi-light.txt": "zi light",
-  "results/zi-load.txt": "zi load",
-  "results/zi-turbo.txt": "zi (Turbo) load",
+  "results/zi-light.txt": "ZI light",
+  "results/zi-load.txt": "ZI load",
+  "results/zi-turbo.txt": "ZI (Turbo) load",
 }
 
 files_inst = [
@@ -86,7 +86,7 @@ autolabel(rects)
 
 plt.title("Installation time, in seconds")
 
-fig.savefig('plots/installation-times.png',
+fig.savefig('docs/plots/installation-times.png',
   transparent=False, dpi=140, bbox_inches="tight")
 
 plt.show()
@@ -135,7 +135,7 @@ ax.title.set(y=1.05)
 
 plt.title("Startup time, in milliseconds")
 
-fig.savefig('plots/startup-times.png', transparent=False,
+fig.savefig('docs/plots/startup-times.png', transparent=False,
   dpi=140, bbox_inches="tight")
 
 plt.show()
