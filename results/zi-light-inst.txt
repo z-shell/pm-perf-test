@@ -1,3 +1,3 @@
-[zshrc] zi block took 89040.1 ms
-[zshrc] zi block took 84133.7 ms
-[zshrc] zi block took 88400.9 ms
+[zshrc] zi block took 91546.9 ms
+[zshrc] zi block took 85774.9 ms
+[zshrc] zi block took 85213.1 ms

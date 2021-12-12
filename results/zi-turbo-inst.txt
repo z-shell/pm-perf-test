@@ -1,6 +1,6 @@
-[zshrc] zi block took 69197.5 ms
-[zshrc] Install time: 69750.0 ms
-[zshrc] zi block took 75226.4 ms
-[zshrc] Install time: 75862.9 ms
-[zshrc] zi block took 73230.9 ms
-[zshrc] Install time: 73735.1 ms
+[zshrc] zi block took 85560.0 ms
+[zshrc] Install time: 86019.6 ms
+[zshrc] zi block took 85257.5 ms
+[zshrc] Install time: 85763.1 ms
+[zshrc] zi block took 80812.4 ms
+[zshrc] Install time: 81340.8 ms
