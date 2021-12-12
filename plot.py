@@ -86,7 +86,7 @@ autolabel(rects)
 
 plt.title("Installation time, in seconds")
 
-fig.savefig('plots/installation-times.png',
+fig.savefig('docs/plots/installation-times.png',
   transparent=False, dpi=140, bbox_inches="tight")
 
 plt.show()
@@ -135,7 +135,7 @@ ax.title.set(y=1.05)
 
 plt.title("Startup time, in milliseconds")
 
-fig.savefig('plots/startup-times.png', transparent=False,
+fig.savefig('docs/plots/startup-times.png', transparent=False,
   dpi=140, bbox_inches="tight")
 
 plt.show()
