@@ -39,7 +39,7 @@ zgen load z-shell/H-S-MW
 
 # git-url
 #zgen load z-shell/git-url
-zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-12
+zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-1
 
 # ZUI and Crasis
 zgen load z-shell/zui
@@ -54,19 +54,19 @@ zgen oh-my-zsh plugins/git
 # On OSX, you might need to install coreutils from homebrew and use the
 # g-prefix – gsed, gdircolors
 #zgen load trapd00r/LS_COLORS
-zgen load z-shell/null null.plugin.zsh empty-plugin.zsh
+zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-2
 
 # Another light of the same plugin, to add zc-bg-notify to PATH
 #zgen load z-shell/zconvey
-zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-2
+zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-3
 
 # fzy
 #zgen load jhawthorn/fzy
-zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-3
+zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-4
 
 # fzf, for fzf-marks
 #zgen load junegunn/fzf-bin
-zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-4
+zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-5
 
 # fzf-marks, at slot 0, for quick Ctrl-G accessibility
 zgen load urbainvaes/fzf-marks
@@ -85,39 +85,27 @@ zgen load zsh-users/zsh-autosuggestions
 #zgen load z-shell/F-Sy-H
 # ogham/exa, replacement for ls
 #zgen load ogham/exa
-zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-5
-
-# vramsteg
-#zgen load z-shell/vramsteg-zsh
-#zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-6
-
-# revolver
-#zgen load z-shell/revolver
-#zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-7
-
-# zunit
-# zgen load z-shell/zunit
-#zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-8
+zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-6
 
 # git-now
 #zgen load iwata/git-now
-zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-9
+zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-7
 
 # git-extras
 # zgen load tj/git-extras
-zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-10
+zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-8
 
 # git-cal
 #zgen load k4rthik/git-cal
-zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-11
+zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-9
 
 # git-recall
 #zgen load Fakerr/git-recall
-zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-13
+zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-10
 
 # git-quick-stats
 #zgen load arzzen/git-quick-stats.git
-zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-14
+zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-11
 
 # generate the init script from plugins above
 zgen save
