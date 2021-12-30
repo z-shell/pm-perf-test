@@ -15,8 +15,8 @@ source "$ZPLUG_HOME/bin/init.zsh"
 zplug z-shell/zsh-unique-id
 
 # zsh-editing-workbench & zsh-navigation-tools
-#zplug z-shell/zsh-editing-workbench
-#zplug z-shell/zsh-navigation-tools   # for n-history
+zplug z-shell/zsh-editing-workbench
+zplug z-shell/zsh-navigation-tools   # for n-history
 
 # declare-zsh
 zplug z-shell/declare-zsh
@@ -31,12 +31,11 @@ zplug z-shell/zconvey, as:command, use:cmds/zc-bg-notify
 zplug z-shell/H-S-MW
 
 # git-url
-#zplug z-shell/git-url, as:command,\
-#use:"$ZPFX/bin/git-url",\
-#hook-build:"make install PREFIX=$ZPFX GITURL_NO_CGITURL=1"
+zplug z-shell/git-url, as:command, use:"$ZPFX/bin/git-url",\
+hook-build:"make install PREFIX=$ZPFX GITURL_NO_CGITURL=1"
 
 # ZUI and Crasis
-#zplug z-shell/zui
+zplug z-shell/zui
 
 # Loaded mostly to stay in touch with the plugin (for the users)
 # and for the themes 2 & 3 (lambda-mod-zsh-theme & lambda-gitster)
@@ -50,8 +49,7 @@ zplug plugins/git, from:oh-my-zsh, hook-load:"unalias grv g 2>/dev/null"
 zplug trapd00r/LS_COLORS, hook-build:"local PFX=${${(M)OSTYPE:#*darwin*}:+g}
 git reset --hard; \${PFX}sed -i '/DIR/c\DIR 38;5;63;1' LS_COLORS; \
 \${PFX}dircolors -b LS_COLORS > c.zsh", \
-use:c.zsh, \
-hook-load:'zstyle a b c'
+use:c.zsh, hook-load:'zstyle a b c'
 
 # fzy
 zplug jhawthorn/fzy, as:command, hook-build:"make PREFIX=$ZPFX install;
@@ -61,13 +59,13 @@ cp contrib/fzy-* $ZPFX/bin/", use:"$ZPFX/bin/fzy*"
 zplug junegunn/fzf, from:gh-r, as:command
 
 # fzf-marks, at slot 0, for quick Ctrl-G accessibility
-
 zplug urbainvaes/fzf-marks
+
 # zsh-autopair
 zplug hlissner/zsh-autopair
 
 # zredis together with some binding/tying
-#zplug z-shell/zredis, hook-load:'ztie -d db/redis -a 127.0.0.1:4815/5 -P $HOME/.zredisconf -zSL main rdhash'
+zplug z-shell/zredis, hook-load:'ztie -d db/redis -a 127.0.0.1:4815/5 -P $HOME/.zredisconf -zSL main rdhash'
 
 # Theme no. 4 – pure
 zplug geometry-zsh/geometry
@@ -87,10 +85,10 @@ zplug z-shell/vramsteg-zsh, as:command, \
 use:src/vramsteg, hook-build:"cmake .; make"
 
 # revolver
-#zplug z-shell/revolver, as:command, use:revolver
+zplug molovo/revolver, as:command, use:revolver
 
 # zunit
-#zplug z-shell/zunit, as:command, use:zunit, hook-build:"./build.zsh"
+zplug molovo/zunit, as:command, use:zunit, hook-build:"./build.zsh"
 
 # git-now
 zplug iwata/git-now, as:command,\
