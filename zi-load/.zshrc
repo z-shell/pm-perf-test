@@ -21,8 +21,8 @@ fi
 zi load z-shell/zsh-unique-id
 
 # zsh-editing-workbench & zsh-navigation-tools
-#zi load z-shell/zsh-editing-workbench
-#zi load z-shell/zsh-navigation-tools   # for n-history
+zi load z-shell/zsh-editing-workbench
+zi load z-shell/zsh-navigation-tools   # for n-history
 
 # declare-zsh
 zi load z-shell/declare-zsh
@@ -32,18 +32,18 @@ zi ice as"program" pick"bin/git-dsf"
 zi load z-shell/zsh-diff-so-fancy
 
 # Another load of the same plugin, to add zc-bg-notify to PATH
-#zi ice silent as"program" id-as"zconvey-cmd" pick"cmds/zc-bg-notify"
-#zi load z-shell/zconvey
+zi ice silent as"program" id-as"zconvey-cmd" pick"cmds/zc-bg-notify"
+zi load z-shell/zconvey
 
 # z-shell/H-S-MW
 zi load z-shell/H-S-MW
 
 # git-url
-#zi ice as"program" pick"$ZPFX/bin/git-url" make"install PREFIX=$ZPFX GITURL_NO_CGITURL=1"
-#zi load z-shell/git-url
+zi ice as"program" pick"$ZPFX/bin/git-url" make"install PREFIX=$ZPFX GITURL_NO_CGITURL=1"
+zi load z-shell/git-url
 
 # ZUI and Crasis
-#zi load z-shell/zui
+zi load z-shell/zui
 
 # Loaded mostly to stay in touch with the plugin (for the users)
 # and for the themes 2 & 3 (lambda-mod-zsh-theme & lambda-gitster)
@@ -77,8 +77,8 @@ zi load urbainvaes/fzf-marks
 zi load hlissner/zsh-autopair
 
 # zredis together with some binding/tying
-#zi ice atload'ztie -d db/redis -a 127.0.0.1:4815/5 -P $HOME/.zredisconf -zSL main rdhash'
-#zi load z-shell/zredis
+zi ice atload'ztie -d db/redis -a 127.0.0.1:4815/5 -P $HOME/.zredisconf -zSL main rdhash'
+zi load z-shell/zredis
 
 # Theme no. 4 – pure
 zi load geometry-zsh/geometry
@@ -99,12 +99,12 @@ zi ice as"program" pick"src/vramsteg" atclone'cmake .' atpull'%atclone' make
 zi load z-shell/vramsteg-zsh
 
 # revolver
-#zi ice as"program" pick"revolver"
-#zi load z-shell/revolver
+zi ice as"program" pick"revolver"
+zi load molovo/revolver
 
 # zunit
-#zi ice as"program" pick"zunit" atclone"./build.zsh" atpull"%atclone"
-#zi load z-shell/zunit
+zi ice as"program" pick"zunit" atclone"./build.zsh" atpull"%atclone"
+zi load molovo/zunit
 
 # git-now
 zi ice as"program" pick"$ZPFX/bin/git-now" make"PREFIX=$ZPFX install"
