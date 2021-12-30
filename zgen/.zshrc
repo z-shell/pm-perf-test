@@ -22,8 +22,8 @@ if ! zgen saved; then
 zgen load z-shell/zsh-unique-id
 
 # zsh-editing-workbench & zsh-navigation-tools
-zgen load z-shell/zsh-editing-workbench
-zgen load z-shell/zsh-navigation-tools   # for n-history
+#zgen load z-shell/zsh-editing-workbench
+#zgen load z-shell/zsh-navigation-tools   # for n-history
 
 # declare-zsh
 zgen load z-shell/declare-zsh
@@ -32,17 +32,17 @@ zgen load z-shell/declare-zsh
 zgen load z-shell/zsh-diff-so-fancy
 
 # z-shell/zconvey
-zgen load z-shell/zconvey
+#zgen load z-shell/zconvey
 
 # z-shell/H-S-MW
 zgen load z-shell/H-S-MW
 
 # git-url
 #zgen load z-shell/git-url
-zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-1
+#zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-1
 
 # ZUI and Crasis
-zgen load z-shell/zui
+#zgen load z-shell/zui
 
 # Loaded mostly to stay in touch with the plugin (for the users)
 # and for the themes 2 & 3 (lambda-mod-zsh-theme & lambda-gitster)
@@ -65,7 +65,7 @@ zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-3
 zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-4
 
 # fzf, for fzf-marks
-#zgen load junegunn/fzf-bin
+#zgen load junegunn/fzf
 zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-5
 
 # fzf-marks, at slot 0, for quick Ctrl-G accessibility
