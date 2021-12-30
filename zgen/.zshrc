@@ -82,7 +82,8 @@ zgen load voronkovich/gitignore.plugin.zsh
 
 # Autosuggestions & F-Sy-H
 zgen load zsh-users/zsh-autosuggestions
-#zgen load z-shell/F-Sy-H
+zgen load zsh-users/zsh-syntax-highlighting
+
 # ogham/exa, replacement for ls
 #zgen load ogham/exa
 zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-6
