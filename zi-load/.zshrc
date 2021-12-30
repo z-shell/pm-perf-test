@@ -88,15 +88,15 @@ zi load voronkovich/gitignore.plugin.zsh
 
 # Autosuggestions
 zi load zsh-users/zsh-autosuggestions
+zi light zsh-users/zsh-syntax-highlighting
 
 # ogham/exa, replacement for ls
 zi ice from"gh-r" as"program" mv"exa* -> exa"
 zi load ogham/exa
 
 # vramsteg
-#zi ice as"program" pick"src/vramsteg" \
-#            atclone'cmake .' atpull'%atclone' make
-#zi load z-shell/vramsteg-zsh
+zi ice as"program" pick"src/vramsteg" atclone'cmake .' atpull'%atclone' make
+zi load z-shell/vramsteg-zsh
 
 # revolver
 #zi ice as"program" pick"revolver"
