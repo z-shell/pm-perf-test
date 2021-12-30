@@ -99,9 +99,11 @@ zi load geometry-zsh/geometry
 zi ice wait"2" lucid
 zi load voronkovich/gitignore.plugin.zsh
 
-# Autosuggestions & fast-syntax-highlighting
+# Autosuggestions & syntax-highlighting
 zi ice wait"1" lucid atload"_zsh_autosuggest_start"
 zi light zsh-users/zsh-autosuggestions
+zi ice wait"1" lucid atinit"ZI[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay"
+zi light zsh-users/zsh-syntax-highlighting
 
 #zi ice wait"1" lucid atinit"ZI[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay"
 #zi light z-shell/fast-syntax-highlighting
@@ -111,8 +113,8 @@ zi ice wait"2" lucid from"gh-r" as"program" mv"exa* -> exa"
 zi light ogham/exa
 
 # vramsteg
-#zi ice wait"2" lucid as"program" pick"src/vramsteg" atclone'cmake .' atpull'%atclone' make
-#zi load z-shell/vramsteg-zsh
+zi ice wait"2" lucid as"program" pick"src/vramsteg" atclone'cmake .' atpull'%atclone' make
+zi load z-shell/vramsteg-zsh
 
 # revolver
 #zi ice wait"2" lucid as"program" pick"revolver"
