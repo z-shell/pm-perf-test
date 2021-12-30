@@ -1,6 +1,6 @@
-[zshrc] Zplug block A took 822.7 ms
-[zshrc] Zplug block A+B took 79465.4 ms
-[zshrc] Zplug block A took 783.9 ms
-[zshrc] Zplug block A+B took 78151.9 ms
-[zshrc] Zplug block A took 750.5 ms
-[zshrc] Zplug block A+B took 77195.6 ms
+[zshrc] Zplug block A took 781.7 ms
+[zshrc] Zplug block A+B took 77135.0 ms
+[zshrc] Zplug block A took 746.4 ms
+[zshrc] Zplug block A+B took 77726.4 ms
+[zshrc] Zplug block A took 768.6 ms
+[zshrc] Zplug block A+B took 78919.5 ms
