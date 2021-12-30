@@ -21,8 +21,8 @@ fi
 zi light z-shell/zsh-unique-id
 
 # zsh-editing-workbench & zsh-navigation-tools
-#zi light z-shell/zsh-editing-workbench
-#zi light z-shell/zsh-navigation-tools   # for n-history
+zi light z-shell/zsh-editing-workbench
+zi light z-shell/zsh-navigation-tools   # for n-history
 
 # declare-zsh
 zi light z-shell/declare-zsh
@@ -32,18 +32,18 @@ zi ice as"program" pick"bin/git-dsf"
 zi light z-shell/zsh-diff-so-fancy
 
 # Another light of the same plugin, to add zc-bg-notify to PATH
-#zi ice silent as"program" id-as"zconvey-cmd" pick"cmds/zc-bg-notify"
-#zi light z-shell/zconvey
+zi ice silent as"program" id-as"zconvey-cmd" pick"cmds/zc-bg-notify"
+zi light z-shell/zconvey
 
 # z-shell/H-S-MW
 zi light z-shell/H-S-MW
 
 # git-url
-#zi ice as"program" pick"$ZPFX/bin/git-url" make"install PREFIX=$ZPFX GITURL_NO_CGITURL=1"
-#zi light z-shell/git-url
+zi ice as"program" pick"$ZPFX/bin/git-url" make"install PREFIX=$ZPFX GITURL_NO_CGITURL=1"
+zi light z-shell/git-url
 
 # ZUI and Crasis
-#zi light z-shell/zui
+zi light z-shell/zui
 
 # Loaded mostly to stay in touch with the plugin (for the users)
 # and for the themes 2 & 3 (lambda-mod-zsh-theme & lambda-gitster)
@@ -78,8 +78,8 @@ zi light urbainvaes/fzf-marks
 zi light hlissner/zsh-autopair
 
 # zredis together with some binding/tying
-#zi ice atload'ztie -d db/redis -a 127.0.0.1:4815/5 -P $HOME/.zredisconf -zSL main rdhash'
-#zi light z-shell/zredis
+zi ice atload'ztie -d db/redis -a 127.0.0.1:4815/5 -P $HOME/.zredisconf -zSL main rdhash'
+zi light z-shell/zredis
 
 # Theme no. 4 – pure
 zi light geometry-zsh/geometry
@@ -100,12 +100,12 @@ zi ice as"program" pick"src/vramsteg" atclone'cmake .' atpull'%atclone' make
 zi light z-shell/vramsteg-zsh
 
 # revolver
-#zi ice as"program" pick"revolver"
-#zi light zunit/revolver
+zi ice as"program" pick"revolver"
+zi light molovo/revolver
 
 # zunit
-#zi ice as"program" pick"zunit" atclone"./build.zsh" atpull"%atclone"
-#zi light zi/zunit
+zi ice as"program" pick"zunit" atclone"./build.zsh" atpull"%atclone"
+zi light molovo/zunit
 
 # git-now
 zi ice as"program" pick"$ZPFX/bin/git-now" make"PREFIX=$ZPFX install"
