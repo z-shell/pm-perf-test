@@ -25,7 +25,7 @@ zplug z-shell/declare-zsh
 zplug z-shell/zsh-diff-so-fancy, as:command, use:"bin/git-dsf"
 
 # Another load of the same plugin, to add zc-bg-notify to PATH
-#zplug z-shell/zconvey, as:command, use:cmds/zc-bg-notify
+zplug z-shell/zconvey, as:command, use:cmds/zc-bg-notify
 
 # z-shell/H-S-MW
 zplug z-shell/H-S-MW
@@ -77,15 +77,14 @@ zplug voronkovich/gitignore.plugin.zsh
 
 # Autosuggestions & F-Sy-H
 zplug zsh-users/zsh-autosuggestions
-#zplug z-shell/F-Sy-H
+zplug zsh-users/zsh-syntax-highlighting
 
 # ogham/exa, replacement for ls
 zplug ogham/exa, from:gh-r, as:command, rename-to:exa, use:"*mac*"
 
 # vramsteg
-#zplug z-shell/vramsteg-zsh, as:command, \
-#use:src/vramsteg, \
-#hook-build:"cmake .; make"
+zplug z-shell/vramsteg-zsh, as:command, \
+use:src/vramsteg, hook-build:"cmake .; make"
 
 # revolver
 #zplug z-shell/revolver, as:command, use:revolver
