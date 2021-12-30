@@ -2,20 +2,21 @@
 
 To run the test, execute:
 
-```zsh
+```Systemverilog
 ./run.zsh
 ```
 
 However, there are problems with `zplug` when the test is run in this way – the test hangs with a message:
 
-```
+```Systemverilog
 zsh: suspended (tty input)  ./run.zsh
 ```
 
 so an invocation of `fg` is required. To address this, run the test script as a
 function:
 
-```zsh
+```Systemverilog
+./fpath.sh
 fpath+=( $PWD )
 autoload run.zsh
 run.zsh
@@ -29,7 +30,7 @@ To compute average results and draw the plots, run `plot.py` Python script. It n
 
 Following 30 plugins are being used in the test:
 
-```shell
+```zsh
 z-shell/zsh-unique-id
 z-shell/zsh-editing-workbench
 z-shell/zsh-navigation-tools
