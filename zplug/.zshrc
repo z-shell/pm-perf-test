@@ -15,8 +15,8 @@ source "$ZPLUG_HOME/bin/init.zsh"
 zplug z-shell/zsh-unique-id
 
 # zsh-editing-workbench & zsh-navigation-tools
-zplug z-shell/zsh-editing-workbench
-zplug z-shell/zsh-navigation-tools   # for n-history
+#zplug z-shell/zsh-editing-workbench
+#zplug z-shell/zsh-navigation-tools   # for n-history
 
 # declare-zsh
 zplug z-shell/declare-zsh
@@ -25,18 +25,18 @@ zplug z-shell/declare-zsh
 zplug z-shell/zsh-diff-so-fancy, as:command, use:"bin/git-dsf"
 
 # Another load of the same plugin, to add zc-bg-notify to PATH
-zplug z-shell/zconvey, as:command, use:cmds/zc-bg-notify
+#zplug z-shell/zconvey, as:command, use:cmds/zc-bg-notify
 
 # z-shell/H-S-MW
 zplug z-shell/H-S-MW
 
 # git-url
-zplug z-shell/git-url, as:command,\
-use:"$ZPFX/bin/git-url",\
-hook-build:"make install PREFIX=$ZPFX GITURL_NO_CGITURL=1"
+#zplug z-shell/git-url, as:command,\
+#use:"$ZPFX/bin/git-url",\
+#hook-build:"make install PREFIX=$ZPFX GITURL_NO_CGITURL=1"
 
 # ZUI and Crasis
-zplug z-shell/zui
+#zplug z-shell/zui
 
 # Loaded mostly to stay in touch with the plugin (for the users)
 # and for the themes 2 & 3 (lambda-mod-zsh-theme & lambda-gitster)
@@ -58,7 +58,7 @@ zplug jhawthorn/fzy, as:command, hook-build:"make PREFIX=$ZPFX install;
 cp contrib/fzy-* $ZPFX/bin/", use:"$ZPFX/bin/fzy*"
 
 # fzf, for fzf-marks
-zplug junegunn/fzf-bin, from:gh-r, as:command
+zplug junegunn/fzf, from:gh-r, as:command
 
 # fzf-marks, at slot 0, for quick Ctrl-G accessibility
 
