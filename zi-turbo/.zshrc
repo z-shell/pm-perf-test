@@ -118,11 +118,11 @@ zi load z-shell/vramsteg-zsh
 
 # revolver
 zi ice wait"2" lucid as"program" pick"revolver"
-zi load z-shell/revolver
+zi load molovo/revolver
 
 # zunit
 zi ice wait"2" lucid as"program" pick"zunit" atclone"./build.zsh" atpull"%atclone"
-zi load z-shell/zunit
+zi load molovo/zunit
 
 # git-now
 zi ice wait"2" lucid as"program" pick"$ZPFX/bin/git-now" make"PREFIX=$ZPFX install"
