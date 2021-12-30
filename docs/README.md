@@ -27,13 +27,18 @@ To compute average results and draw the plots, run `plot.py` Python script. It n
 
 ## Details of the test
 
-Following 22 plugins are being used in the test:
+Following 30 plugins are being used in the test:
 
 ```shell
 z-shell/zsh-unique-id
+z-shell/zsh-editing-workbench
+z-shell/zsh-navigation-tools
 z-shell/declare-zsh
 z-shell/zsh-diff-so-fancy
+z-shell/zconvey
 z-shell/H-S-MW
+z-shell/git-url
+z-shell/zui
 Oh My Zsh / lib/git.zsh
 Oh My Zsh / plugins/git/git.plugin.zsh
 trapd00r/LS_COLORS
@@ -41,11 +46,14 @@ jhawthorn/fzy
 junegunn/fzf
 urbainvaes/fzf-marks
 hlissner/zsh-autopair
+z-shell/zredis
 geometry-zsh/geometry
 voronkovich/gitignore.plugin.zsh
 zsh-users/zsh-autosuggestions
 zsh-users/zsh-syntax-highlighting
 z-shell/vramsteg-zsh
+molovo/revolver
+molovo/zunit
 ogham/exa
 iwata/git-now
 tj/git-extras
