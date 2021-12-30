@@ -22,10 +22,10 @@ zi ice wait lucid
 zi load z-shell/zsh-unique-id
 
 # zsh-editing-workbench & zsh-navigation-tools
-#zi ice wait"1" lucid
-#zi load z-shell/zsh-editing-workbench
-#zi ice wait"1" lucid
-#zi load z-shell/zsh-navigation-tools   # for n-history
+zi ice wait"1" lucid
+zi load z-shell/zsh-editing-workbench
+zi ice wait"1" lucid
+zi load z-shell/zsh-navigation-tools   # for n-history
 
 # declare-zsh
 zi ice wait"2" lucid
@@ -36,20 +36,20 @@ zi ice wait"2" lucid as"program" pick"bin/git-dsf"
 zi load z-shell/zsh-diff-so-fancy
 
 # Another load of the same plugin, to add zc-bg-notify to PATH
-#zi ice wait silent as"program" id-as"zconvey-cmd" pick"cmds/zc-bg-notify"
-#zi load z-shell/zconvey
+zi ice wait silent as"program" id-as"zconvey-cmd" pick"cmds/zc-bg-notify"
+zi load z-shell/zconvey
 
 # z-shell/H-S-MW
 zi ice wait"1" lucid
 zi load z-shell/H-S-MW
 
 # git-url
-#zi ice wait"2" lucid as"program" pick"$ZPFX/bin/git-url" make"install PREFIX=$ZPFX GITURL_NO_CGITURL=1"
-#zi load z-shell/git-url
+zi ice wait"2" lucid as"program" pick"$ZPFX/bin/git-url" make"install PREFIX=$ZPFX GITURL_NO_CGITURL=1"
+zi load z-shell/git-url
 
 # ZUI and Crasis
-#zi ice wait"1" lucid
-#zi load z-shell/zui
+zi ice wait"1" lucid
+zi load z-shell/zui
 
 # Loaded mostly to stay in touch with the plugin (for the users)
 # and for the themes 2 & 3 (lambda-mod-zsh-theme & lambda-gitster)
@@ -88,8 +88,8 @@ zi ice wait lucid
 zi load hlissner/zsh-autopair
 
 # zredis together with some binding/tying
-#zi ice wait"1" lucid atload'ztie -d db/redis -a 127.0.0.1:4815/5 -P $HOME/.zredisconf -zSL main rdhash'
-#zi load z-shell/zredis
+zi ice wait"1" lucid atload'ztie -d db/redis -a 127.0.0.1:4815/5 -P $HOME/.zredisconf -zSL main rdhash'
+zi load z-shell/zredis
 
 # Theme no. 4 – pure
 zi ice wait'!' lucid atload"geometry::prompt"
@@ -117,12 +117,12 @@ zi ice wait"2" lucid as"program" pick"src/vramsteg" atclone'cmake .' atpull'%atc
 zi load z-shell/vramsteg-zsh
 
 # revolver
-#zi ice wait"2" lucid as"program" pick"revolver"
-#zi load z-shell/revolver
+zi ice wait"2" lucid as"program" pick"revolver"
+zi load z-shell/revolver
 
 # zunit
-#zi ice wait"2" lucid as"program" pick"zunit" atclone"./build.zsh" atpull"%atclone"
-#zi load z-shell/zunit
+zi ice wait"2" lucid as"program" pick"zunit" atclone"./build.zsh" atpull"%atclone"
+zi load z-shell/zunit
 
 # git-now
 zi ice wait"2" lucid as"program" pick"$ZPFX/bin/git-now" make"PREFIX=$ZPFX install"
