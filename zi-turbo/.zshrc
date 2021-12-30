@@ -67,17 +67,17 @@ git reset --hard; \${PFX}sed -i '/DIR/c\DIR 38;5;63;1' LS_COLORS; \
 \${PFX}dircolors -b LS_COLORS > c.zsh" \
 atpull'%atclone' pick"c.zsh" nocompile'!' \
 atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”'
-zi light trapd00r/LS_COLORS
+zi load trapd00r/LS_COLORS
 
 # fzy
 zi ice wait"1" lucid as"program" make"!PREFIX=$ZPFX install" \
 atclone"cp contrib/fzy-* $ZPFX/bin/" \
 pick"$ZPFX/bin/fzy*"
-zi light jhawthorn/fzy
+zi load jhawthorn/fzy
 
 # fzf, for fzf-marks
 zi ice wait lucid from"gh-r" as"program"
-zi light junegunn/fzf
+zi load junegunn/fzf
 
 # fzf-marks, at slot 0, for quick Ctrl-G accessibility
 zi ice wait lucid
@@ -101,16 +101,16 @@ zi load voronkovich/gitignore.plugin.zsh
 
 # Autosuggestions & syntax-highlighting
 zi ice wait"1" lucid atload"_zsh_autosuggest_start"
-zi light zsh-users/zsh-autosuggestions
+zi load zsh-users/zsh-autosuggestions
 zi ice wait"1" lucid atinit"ZI[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay"
-zi light zsh-users/zsh-syntax-highlighting
+zi load zsh-users/zsh-syntax-highlighting
 
 #zi ice wait"1" lucid atinit"ZI[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay"
-#zi light z-shell/fast-syntax-highlighting
+#zi load z-shell/fast-syntax-highlighting
 
 # ogham/exa, replacement for ls
 zi ice wait"2" lucid from"gh-r" as"program" mv"exa* -> exa"
-zi light ogham/exa
+zi load ogham/exa
 
 # vramsteg
 zi ice wait"2" lucid as"program" pick"src/vramsteg" atclone'cmake .' atpull'%atclone' make
