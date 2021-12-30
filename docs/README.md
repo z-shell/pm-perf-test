@@ -43,7 +43,7 @@ Oh My Zsh / lib/git.zsh
 Oh My Zsh / plugins/git/git.plugin.zsh
 trapd00r/LS_COLORS
 jhawthorn/fzy
-junegunn/fzf-bin
+junegunn/fzf
 urbainvaes/fzf-marks
 hlissner/zsh-autopair
 geometry-zsh/geometry
