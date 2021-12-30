@@ -21,8 +21,8 @@ fi
 zi light z-shell/zsh-unique-id
 
 # zsh-editing-workbench & zsh-navigation-tools
-zi light z-shell/zsh-editing-workbench
-zi light z-shell/zsh-navigation-tools   # for n-history
+#zi light z-shell/zsh-editing-workbench
+#zi light z-shell/zsh-navigation-tools   # for n-history
 
 # declare-zsh
 zi light z-shell/declare-zsh
@@ -32,18 +32,18 @@ zi ice as"program" pick"bin/git-dsf"
 zi light z-shell/zsh-diff-so-fancy
 
 # Another light of the same plugin, to add zc-bg-notify to PATH
-zi ice silent as"program" id-as"zconvey-cmd" pick"cmds/zc-bg-notify"
-zi light z-shell/zconvey
+#zi ice silent as"program" id-as"zconvey-cmd" pick"cmds/zc-bg-notify"
+#zi light z-shell/zconvey
 
 # z-shell/H-S-MW
 zi light z-shell/H-S-MW
 
 # git-url
-zi ice as"program" pick"$ZPFX/bin/git-url" make"install PREFIX=$ZPFX GITURL_NO_CGITURL=1"
-zi light z-shell/git-url
+#zi ice as"program" pick"$ZPFX/bin/git-url" make"install PREFIX=$ZPFX GITURL_NO_CGITURL=1"
+#zi light z-shell/git-url
 
 # ZUI and Crasis
-zi light z-shell/zui
+#zi light z-shell/zui
 
 # Loaded mostly to stay in touch with the plugin (for the users)
 # and for the themes 2 & 3 (lambda-mod-zsh-theme & lambda-gitster)
@@ -69,7 +69,7 @@ zi light jhawthorn/fzy
 
 # fzf, for fzf-marks
 zi ice from"gh-r" as"program"
-zi light junegunn/fzf-bin
+zi light junegunn/fzf
 
 # fzf-marks, at slot 0, for quick Ctrl-G accessibility
 zi light urbainvaes/fzf-marks
