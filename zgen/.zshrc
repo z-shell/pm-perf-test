@@ -33,14 +33,14 @@ zgen load z-shell/zsh-diff-so-fancy
 
 # Another light of the same plugin, to add zc-bg-notify to PATH
 #zgen load z-shell/zconvey
-zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-3
+zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-1
 
 # z-shell/H-S-MW
 zgen load z-shell/H-S-MW
 
 # git-url
 zgen load z-shell/git-url
-zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-1
+zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-2
 
 # ZUI
 zgen load z-shell/zui
@@ -55,7 +55,7 @@ zgen oh-my-zsh plugins/git
 # On OSX, you might need to install coreutils from homebrew and use the
 # g-prefix – gsed, gdircolors
 #zgen load trapd00r/LS_COLORS
-zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-2
+zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-3
 
 # fzy
 #zgen load jhawthorn/fzy
@@ -91,31 +91,31 @@ zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-7
 
 # revolver
 #zgen load molovo/revolver
-zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-7
+zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-8
 
 # zunit
 #zgen load molovo/zunit
-zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-7
+zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-9
 
 # git-now
 #zgen load iwata/git-now
-zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-7
+zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-10
 
 # git-extras
 # zgen load tj/git-extras
-zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-8
+zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-11
 
 # git-cal
 #zgen load k4rthik/git-cal
-zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-9
+zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-12
 
 # git-recall
 #zgen load Fakerr/git-recall
-zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-10
+zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-13
 
 # git-quick-stats
 #zgen load arzzen/git-quick-stats.git
-zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-11
+zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-14
 
 # generate the init script from plugins above
 zgen save
