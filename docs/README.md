@@ -44,6 +44,7 @@ hlissner/zsh-autopair
 geometry-zsh/geometry
 voronkovich/gitignore.plugin.zsh
 zsh-users/zsh-autosuggestions
+zsh-users/zsh-syntax-highlighting
 ogham/exa
 iwata/git-now
 tj/git-extras
