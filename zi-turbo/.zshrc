@@ -22,10 +22,10 @@ zi ice wait lucid
 zi load z-shell/zsh-unique-id
 
 # zsh-editing-workbench & zsh-navigation-tools
-zi ice wait"1" lucid
-zi load z-shell/zsh-editing-workbench
-zi ice wait"1" lucid
-zi load z-shell/zsh-navigation-tools   # for n-history
+#zi ice wait"1" lucid
+#zi load z-shell/zsh-editing-workbench
+#zi ice wait"1" lucid
+#zi load z-shell/zsh-navigation-tools   # for n-history
 
 # declare-zsh
 zi ice wait"2" lucid
@@ -36,20 +36,20 @@ zi ice wait"2" lucid as"program" pick"bin/git-dsf"
 zi load z-shell/zsh-diff-so-fancy
 
 # Another load of the same plugin, to add zc-bg-notify to PATH
-zi ice wait silent as"program" id-as"zconvey-cmd" pick"cmds/zc-bg-notify"
-zi load z-shell/zconvey
+#zi ice wait silent as"program" id-as"zconvey-cmd" pick"cmds/zc-bg-notify"
+#zi load z-shell/zconvey
 
 # z-shell/H-S-MW
 zi ice wait"1" lucid
 zi load z-shell/H-S-MW
 
 # git-url
-zi ice wait"2" lucid as"program" pick"$ZPFX/bin/git-url" make"install PREFIX=$ZPFX GITURL_NO_CGITURL=1"
-zi load z-shell/git-url
+#zi ice wait"2" lucid as"program" pick"$ZPFX/bin/git-url" make"install PREFIX=$ZPFX GITURL_NO_CGITURL=1"
+#zi load z-shell/git-url
 
 # ZUI and Crasis
-zi ice wait"1" lucid
-zi load z-shell/zui
+#zi ice wait"1" lucid
+#zi load z-shell/zui
 
 # Loaded mostly to stay in touch with the plugin (for the users)
 # and for the themes 2 & 3 (lambda-mod-zsh-theme & lambda-gitster)
@@ -62,7 +62,7 @@ zi snippet OMZ::plugins/git/git.plugin.zsh
 
 # On OSX, you might need to install coreutils from homebrew and use the
 # g-prefix – gsed, gdircolors
-zi ice wait"0c" lucid atclone"local PFX=${${(M)OSTYPE:#*darwin*}:+g}
+zi ice wait"1" lucid atclone"local PFX=${${(M)OSTYPE:#*darwin*}:+g}
 git reset --hard; \${PFX}sed -i '/DIR/c\DIR 38;5;63;1' LS_COLORS; \
 \${PFX}dircolors -b LS_COLORS > c.zsh" \
 atpull'%atclone' pick"c.zsh" nocompile'!' \
@@ -77,7 +77,7 @@ zi light jhawthorn/fzy
 
 # fzf, for fzf-marks
 zi ice wait lucid from"gh-r" as"program"
-zi light junegunn/fzf-bin
+zi light junegunn/fzf
 
 # fzf-marks, at slot 0, for quick Ctrl-G accessibility
 zi ice wait lucid
@@ -100,7 +100,7 @@ zi ice wait"2" lucid
 zi load voronkovich/gitignore.plugin.zsh
 
 # Autosuggestions & fast-syntax-highlighting
-zi ice wait"0c" lucid atload"_zsh_autosuggest_start"
+zi ice wait"1" lucid atload"_zsh_autosuggest_start"
 zi light zsh-users/zsh-autosuggestions
 
 #zi ice wait"1" lucid atinit"ZI[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay"
