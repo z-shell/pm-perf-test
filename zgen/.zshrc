@@ -3,7 +3,7 @@ ZGEN_DIR="$PWD/_zgen"
 compdef() { :; }
 
 if [[ ! -d "$ZGEN_DIR" ]]; then
-    git clone --depth 1 https://github.com/tarjoilija/zgen.git "$ZGEN_DIR"
+  git clone --depth 1 https://github.com/tarjoilija/zgen.git "$ZGEN_DIR"
 fi
 
 # Start measuring time, in general with microsecond accuracy
@@ -42,8 +42,9 @@ zgen load z-shell/H-S-MW
 zgen load z-shell/git-url
 zgen load z-shell/null null.plugin.zsh empty-plugin.zsh-2
 
-# ZUI
+# ZUI & Crasis
 zgen load z-shell/zui
+zgen load z-shell/zi-crasis
 
 # Loaded mostly to stay in touch with the plugin (for the users)
 # and for the themes 2 & 3 (lambda-mod-zsh-theme & lambda-gitster)

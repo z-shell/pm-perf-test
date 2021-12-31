@@ -44,6 +44,7 @@ zi load z-shell/git-url
 
 # ZUI and Crasis
 zi load z-shell/zui
+zi load z-shell/zi-crasis
 
 # Loaded mostly to stay in touch with the plugin (for the users)
 # and for the themes 2 & 3 (lambda-mod-zsh-theme & lambda-gitster)
@@ -77,8 +78,8 @@ zi load urbainvaes/fzf-marks
 zi load hlissner/zsh-autopair
 
 # zredis together with some binding/tying
-zi ice atload'ztie -d db/redis -a 127.0.0.1:4815/5 -P $HOME/.zredisconf -zSL main rdhash'
-zi load z-shell/zredis
+#zi ice atload'ztie -d db/redis -a 127.0.0.1:4815/5 -P $HOME/.zredisconf -zSL main rdhash'
+#zi load z-shell/zredis
 
 # Theme no. 4 – pure
 zi load geometry-zsh/geometry

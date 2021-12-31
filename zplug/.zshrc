@@ -36,6 +36,7 @@ hook-build:"make install PREFIX=$ZPFX GITURL_NO_CGITURL=1"
 
 # ZUI and Crasis
 zplug z-shell/zui
+zplug z-shell/zi-crasis
 
 # Loaded mostly to stay in touch with the plugin (for the users)
 # and for the themes 2 & 3 (lambda-mod-zsh-theme & lambda-gitster)
@@ -65,7 +66,7 @@ zplug urbainvaes/fzf-marks
 zplug hlissner/zsh-autopair
 
 # zredis together with some binding/tying
-zplug z-shell/zredis, hook-load:'ztie -d db/redis -a 127.0.0.1:4815/5 -P $HOME/.zredisconf -zSL main rdhash'
+#zplug z-shell/zredis, hook-load:'ztie -d db/redis -a 127.0.0.1:4815/5 -P $HOME/.zredisconf -zSL main rdhash'
 
 # Theme no. 4 – pure
 zplug geometry-zsh/geometry

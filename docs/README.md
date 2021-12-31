@@ -2,7 +2,7 @@
 
 To run the test, execute:
 
-```Systemverilog
+```zsh
 ./run.zsh
 ```
 
@@ -15,8 +15,7 @@ zsh: suspended (tty input)  ./run.zsh
 so an invocation of `fg` is required. To address this, run the test script as a
 function:
 
-```Systemverilog
-./fpath.sh
+```zsh
 fpath+=( $PWD )
 autoload run.zsh
 run.zsh
@@ -40,6 +39,7 @@ z-shell/zconvey
 z-shell/H-S-MW
 z-shell/git-url
 z-shell/zui
+z-shell/zi-crasis
 Oh My Zsh / lib/git.zsh
 Oh My Zsh / plugins/git/git.plugin.zsh
 trapd00r/LS_COLORS
@@ -47,7 +47,6 @@ jhawthorn/fzy
 junegunn/fzf
 urbainvaes/fzf-marks
 hlissner/zsh-autopair
-z-shell/zredis
 geometry-zsh/geometry
 voronkovich/gitignore.plugin.zsh
 zsh-users/zsh-autosuggestions
