@@ -1,4 +1,9 @@
-<h1> Plugin Manager performance test for Zsh </h1>
+<h2 align="center">
+  <a href="https://github.com/z-shell/zi">
+    <img src="https://github.com/z-shell/zi/raw/main/docs/images/logo.svg" alt="Logo" width="80" height="80" />
+  </a>
+❮ ZI ❯ Plugin Manager performance test for Zsh
+</h2>
 
 To run the test, execute:
 
