@@ -5,6 +5,18 @@
 ❮ ZI ❯ Plugin Manager performance test for Zsh
 </h2>
 
+> [!WARNING]
+> **Historical benchmark**
+>
+> The charts and raw results in this repository are a December 2021 snapshot.
+> The tested workloads and timing methods are methodologically non-comparable
+> across plugin managers. The managers, plugins, dependencies, and execution
+> environments have changed since these measurements were collected.
+>
+> Do not use these results to select or rank a Zsh plugin manager today. This
+> repository is retained only as historical evidence and is not maintained as a
+> current benchmark.
+
 To run the test, execute:
 
 ```zsh
